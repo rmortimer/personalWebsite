@@ -1,6 +1,6 @@
 html {
     background: white;
-    <!--background-image: linear-gradient(270deg, rgb(0, 233, 233) 0%, rgb(216, 221, 221) 100%);-->
+    background-image: linear-gradient(270deg, rgb(0, 233, 233) 0%, rgb(216, 221, 221) 100%);
     -webkit-font-smoothing: antialiased;
      background-size: 100% 100%;
 }
@@ -21,17 +21,75 @@ body {
     padding: 2em 2em 2em 2em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2,h3 h4, h5, h6 {
     color: #222;
     font-weight: 600;
     line-height: 1.3;
     text-align: center;
 }
+h1 {
+    color: #222;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+
+h1::before{
+    content: ' ';
+    height: 3px;
+    width: 80px;
+    margin: 0 10px;
+    display: inline-block;
+    zoom: 1;
+    color: white;
+    background-color: white;
+}
+h1::after{
+    content: ' ';
+    top: 50%;
+    height: 3px;
+    width: 80px;
+    margin: 0 10px;
+    display: inline-block;
+    zoom: 1;
+    color: white;
+    background-color: white;
+}
 
 h2 {
     margin-top: 1.0em;
+    position: relative;
+    font-size: 2em;
 }
 
+h2::before{
+    content: ' ';
+    top: 50%;
+    height: 2px;
+    width: 80px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    display: inline-block;
+    zoom: 1;
+    color: #333;
+    background-color: #333;
+}
+h2::after{
+    content: ' ';
+    top: 50%;
+    height: 2px;
+    width: 80px;
+    margin-bottom: 8px;
+    margin-left: 2px;
+    display: inline-block;
+    background-color: #333;
+}
+
+h3{
+  text-align: center;
+}
 
 /*
 img {
@@ -73,7 +131,7 @@ img:hover{
 
 .titleTextLine {
     color: white;
-    font-family: Lato;
+    font-family: 'Open Sans';
 }
 
 .columnHeader{
@@ -133,14 +191,18 @@ img.left_Image {
     color: forestgreen;
     text-align: left;
     font-size: 24px;
+    line-height: 1.5;
 }
 
 .companyLocation{
     font-size: 16px;
+    line-height: 1.5;
 }
 
 .jobDescription{
+    line-height: 1.2;
     font-size: 14px;
+    color: darkgrey;
     text-overflow: ellipsis;
 }
 
