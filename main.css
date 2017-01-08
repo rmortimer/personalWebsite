@@ -26,8 +26,6 @@ h6 {
     text-align: center;
 }
 
-
-
 h1 {
     color: #222;
     font-weight: 900;
@@ -61,10 +59,13 @@ h1::after {
     margin-right: 8px;
 }
 
-p::first-letter{
+p {
+    margin: 0px 70px 70px 70px;
+}
+
+p::first-letter {
     color: black;
     font-weight: 900;
-
 }
 
 h2 {
@@ -157,7 +158,7 @@ h2::after {
     border-radius: 15%;
     display: inline-block;
     margin-right: 30px;
-    box-shadow: 3px 10px 5px #888888;
+    box-shadow: 3px 10px 10px #888888;
 }
 
 .windStreamTile {
@@ -212,6 +213,7 @@ h2::after {
     position: relative;
 }
 
+
 /*
 .lifeGalleryRow{
     text-align: center;
@@ -231,13 +233,13 @@ h2::after {
     display: inline-block;
     margin-left: 20px;
     margin-right: 20px;
-    -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(80%);
+    /* Safari 6.0 - 9.0 */
     filter: grayscale(80%);
-
 }
 
 .thumbNailPlaceHolder {
-     border-radius: 5%;
+    border-radius: 5%;
     width: 160px;
     height: 160px;
     display: inline-block;
@@ -245,22 +247,23 @@ h2::after {
     margin-right: 20px;
 }
 
-.thumbNail:hover{
-    animation: colorize .8s; 
-    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+.thumbNail:hover {
+    animation: colorize .8s;
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
 }
 
-.codeOfConductBackground{
+.codeOfConductBackground {
     width: auto;
-    height: 600px;
-    background: #6db3f2; /* Old browsers */
-    background: linear-gradient(to right, rgba(0,0,0,0), teal), linear-gradient(to right, rgba(255,0,100,.3), rgba(255,100,127,.2)), linear-gradient(to top right, yellow, rgba(0,0,0,0)), radial-gradient(closest-corner at 20% 80%, yellow, red);
+    height: 800px;
+    background: #6db3f2;
+    /* Old browsers */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), teal), linear-gradient(to right, rgba(255, 0, 100, .3), rgba(255, 100, 127, .2)), linear-gradient(to top right, yellow, rgba(0, 0, 0, 0)), radial-gradient(closest-corner at 20% 80%, yellow, red);
     background-attachment: fixed;
-        
 }
 
-.codeOfConductLine{
+.codeOfConductLine {
     margin: auto;
     display: block;
     margin-top: 15px;
@@ -268,23 +271,73 @@ h2::after {
     color: black;
     font-weight: 600;
     line-height: 1.5;
-    text-align: center;   
+    text-align: center;
 }
 
 .mediaTile {
     width: 160px;
     height: 160px;
     background-size: cover;
+    background-position: center;
     display: inline-block;
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.mediaTile:hover{
-    animation: radiaize .5s; 
+.mediaTile:hover {
+    animation: radiaize .5s;
     border-radius: 60%;
 }
 
+.grow {
+    width: 160px;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.grow:hover {
+    width: 220px;
+    height: 220px;
+}
+
+.scrollUp {
+    position: fixed;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 1;
+    bottom: 35px;
+    right: 0;
+    margin: 10px;
+}
+
+.scrollDown {
+    position: fixed;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
 
 @keyframes colorize {
     0% {
@@ -299,9 +352,9 @@ h2::after {
 
 @keyframes radiaize {
     0% {
-    border-radius: 0%;
+        border-radius: 0%;
     }
     100% {
-    border-radius: 60%;
+        border-radius: 60%;
     }
 }
