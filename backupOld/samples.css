@@ -1,0 +1,19 @@
+
+
+.image {
+    display: inline-block;!important
+    vertical-align: middle;!important
+    width: 100px;!important
+    height: 100px; !important
+    max-height: 100px;
+    max-width: 100px;
+    position: relative;
+    margin: auto;
+}
+.text {
+    display: inline-block;!important
+    vertical-align: middle;!important
+    width: calc(100% - 100px); !important   
+    position: relative;
+    margin: auto;
+}
